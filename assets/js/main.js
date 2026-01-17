@@ -1,5 +1,6 @@
 
 function updateProfileInfo(profileData) {
+    console.log(profileData)
     const photo = document.querySelector('#profile-photo');
     photo.src = profileData.photo;
     photo.alt = profileData.name;
@@ -8,6 +9,7 @@ function updateProfileInfo(profileData) {
     name.innerText = profileData.name;
 
     const job = document.querySelector('#profile-job');
+    console.log(job)
     job.innerText = profileData.job;
 
     const location = document.querySelector('#profile-location')
