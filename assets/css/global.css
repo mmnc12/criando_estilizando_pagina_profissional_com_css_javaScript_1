@@ -32,7 +32,7 @@ a:hover {
 
 .main::before {
   content: '';
-  background-image: url('/assets/img/bk-1.svg');
+  background-image: url('assets/img/bk-1.svg');
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
@@ -46,7 +46,7 @@ a:hover {
 
 .main::after {
   content: '';
-  background-image: url('/assets/img/bk-1.svg');
+  background-image: url('assets/img/bk-1.svg');
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
@@ -62,7 +62,7 @@ a:hover {
 
 @font-face {
     font-family: 'Neue Machina';
-    src: url(/assets/font/NeueMachina-Regular.otf);
+    src: url(assets/font/NeueMachina-Regular.otf);
 }
 
 @media (min-width: 768px) {
