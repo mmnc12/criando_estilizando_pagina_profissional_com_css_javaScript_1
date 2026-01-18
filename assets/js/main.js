@@ -106,6 +106,8 @@ function updateProfilePortfolio(profileData) {
 function updateProfileprofessionalExperience(profileData) {
     const ul = document.querySelector('#experiences');
 
+    console.log(ul)
+
     if (!ul) {
         console.error('Lista de experiencias vazia!');
         return;
