@@ -1,6 +1,5 @@
 
 function updateProfileInfo(profileData) {
-    console.log(profileData)
     const photo = document.querySelector('#profile-photo');
     photo.src = profileData.photo;
     photo.alt = profileData.name;
@@ -9,7 +8,6 @@ function updateProfileInfo(profileData) {
     name.innerText = profileData.name;
 
     const job = document.querySelector('#profile-job');
-    console.log(job)
     job.innerText = profileData.job;
 
     const location = document.querySelector('#profile-location')
@@ -27,7 +25,7 @@ function updateProfileInfo(profileData) {
 function updateProfileSkillsHard(profileData) {
     const ul = document.querySelector('#profile-skills-hardSkills');
 
-    if(!ul) {
+    if (!ul) {
         console.log("Lista de hard vazia!");
         return
     }
@@ -48,7 +46,7 @@ function updateProfileSkillsHard(profileData) {
 function updateProfileSkillsSoft(profileData) {
     const ul = document.querySelector('#profile-skills-softSkills');
 
-    if(!ul) {
+    if (!ul) {
         console.error('Lista vazia!')
         return;
     }
@@ -65,7 +63,7 @@ function updateProfileSkillsSoft(profileData) {
 function updateProfileLinguages(profileData) {
     const ul = document.querySelector('#linguage');
 
-    if(!ul) {
+    if (!ul) {
         console.error('Lista de linguagens vazia!');
         return
     }
@@ -83,7 +81,7 @@ function updateProfileLinguages(profileData) {
 function updateProfilePortfolio(profileData) {
     const ul = document.querySelector('.portfolio');
 
-    if(!ul) {
+    if (!ul) {
         console.error('Lista de portfolio vazia!');
         return;
     }
@@ -108,7 +106,7 @@ function updateProfilePortfolio(profileData) {
 function updateProfileprofessionalExperience(profileData) {
     const ul = document.querySelector('#experiences');
 
-    if(!ul) {
+    if (!ul) {
         console.error('Lista de experiencias vazia!');
         return;
     }
@@ -122,22 +120,22 @@ function updateProfileprofessionalExperience(profileData) {
         h3.classList.add('title');
         h3.innerText = experience.name;
 
-        const period = document.querySelector('p');
+        const period = document.createElement('p');
         period.classList.add('period');
         period.innerText = experience.period;
 
-        const description = document.querySelector('p');
+        const description = document.createElement('p');
         description.classList.add('description');
         description.innerText = experience.description;
 
         li.append(h3, period, description);
-        
-        ul.appendChild(li)        
+
+        ul.appendChild(li)
     })
 }
 
 (async () => {
-    const profileData = await fetchProfileDate();
+    const profileData = await fetchProfileData();
     updateProfileInfo(profileData);
     updateProfileSkillsSoft(profileData);
     updateProfileSkillsHard(profileData);
